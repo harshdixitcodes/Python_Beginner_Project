@@ -19,3 +19,11 @@ def main():
     while True:
         now = datetime.datetime.now().time()
         #compare current time with alarm time
+        if now.hour == alarm_time.hour and now.minute == alarm_time.minute:
+            print("Alarm! Time to wake up!")
+            break
+        else:
+            time.sleep(10)
+            
+if __name__ == "__main__":
+    main()
